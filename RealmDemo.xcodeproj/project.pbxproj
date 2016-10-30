@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		6F303D011DC104C300216158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F303D001DC104C300216158 /* AppDelegate.swift */; };
-		6F303D031DC104C300216158 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F303D021DC104C300216158 /* ViewController.swift */; };
 		6F303D061DC104C300216158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F303D041DC104C300216158 /* Main.storyboard */; };
 		6F303D081DC104C300216158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F303D071DC104C300216158 /* Assets.xcassets */; };
 		6F303D0B1DC104C300216158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F303D091DC104C300216158 /* LaunchScreen.storyboard */; };
+		6FBC862C1DC6211A006DB272 /* AddEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC86291DC6211A006DB272 /* AddEditTableViewController.swift */; };
+		6FBC862D1DC6211A006DB272 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC862A1DC6211A006DB272 /* HomeTableViewController.swift */; };
+		6FBC862E1DC6211A006DB272 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC862B1DC6211A006DB272 /* Person.swift */; };
+		BA326B705EAEF0B71DC83E01 /* Pods_RealmDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7ABBB7C6F4310163432D79 /* Pods_RealmDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6F303CFD1DC104C300216158 /* RealmDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F303D001DC104C300216158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F303D021DC104C300216158 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6F303D051DC104C300216158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F303D071DC104C300216158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F303D0A1DC104C300216158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F303D0C1DC104C300216158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FBC86291DC6211A006DB272 /* AddEditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditTableViewController.swift; sourceTree = "<group>"; };
+		6FBC862A1DC6211A006DB272 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		6FBC862B1DC6211A006DB272 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		AA7ABBB7C6F4310163432D79 /* Pods_RealmDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44411221D4C15F79ACE43C9 /* Pods-RealmDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmDemo/Pods-RealmDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		EB5DD49B0D2A1E33B4A487AB /* Pods-RealmDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmDemo/Pods-RealmDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA326B705EAEF0B71DC83E01 /* Pods_RealmDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57E205667138B9AFD241C61A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA7ABBB7C6F4310163432D79 /* Pods_RealmDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F8D71E99AB17DFB829EBF87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C44411221D4C15F79ACE43C9 /* Pods-RealmDemo.debug.xcconfig */,
+				EB5DD49B0D2A1E33B4A487AB /* Pods-RealmDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6F303CF41DC104C300216158 = {
 			isa = PBXGroup;
 			children = (
 				6F303CFF1DC104C300216158 /* RealmDemo */,
 				6F303CFE1DC104C300216158 /* Products */,
+				5F8D71E99AB17DFB829EBF87 /* Pods */,
+				57E205667138B9AFD241C61A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +82,40 @@
 		6F303CFF1DC104C300216158 /* RealmDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6FBC86311DC62138006DB272 /* Controller */,
+				6FBC86301DC6212C006DB272 /* Model */,
+				6FBC862F1DC62121006DB272 /* View */,
 				6F303D001DC104C300216158 /* AppDelegate.swift */,
-				6F303D021DC104C300216158 /* ViewController.swift */,
-				6F303D041DC104C300216158 /* Main.storyboard */,
 				6F303D071DC104C300216158 /* Assets.xcassets */,
-				6F303D091DC104C300216158 /* LaunchScreen.storyboard */,
 				6F303D0C1DC104C300216158 /* Info.plist */,
 			);
 			path = RealmDemo;
+			sourceTree = "<group>";
+		};
+		6FBC862F1DC62121006DB272 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6F303D041DC104C300216158 /* Main.storyboard */,
+				6F303D091DC104C300216158 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6FBC86301DC6212C006DB272 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC862B1DC6211A006DB272 /* Person.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6FBC86311DC62138006DB272 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC86291DC6211A006DB272 /* AddEditTableViewController.swift */,
+				6FBC862A1DC6211A006DB272 /* HomeTableViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F303D0F1DC104C300216158 /* Build configuration list for PBXNativeTarget "RealmDemo" */;
 			buildPhases = (
+				848053E07EFF7AA51B4B2D31 /* [CP] Check Pods Manifest.lock */,
 				6F303CF91DC104C300216158 /* Sources */,
 				6F303CFA1DC104C300216158 /* Frameworks */,
 				6F303CFB1DC104C300216158 /* Resources */,
+				1B43CB57C8A9295C1CAD9483 /* [CP] Embed Pods Frameworks */,
+				EBAA53512253D40BC717B1A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +187,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B43CB57C8A9295C1CAD9483 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmDemo/Pods-RealmDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		848053E07EFF7AA51B4B2D31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBAA53512253D40BC717B1A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmDemo/Pods-RealmDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6F303CF91DC104C300216158 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F303D031DC104C300216158 /* ViewController.swift in Sources */,
+				6FBC862E1DC6211A006DB272 /* Person.swift in Sources */,
+				6FBC862D1DC6211A006DB272 /* HomeTableViewController.swift in Sources */,
+				6FBC862C1DC6211A006DB272 /* AddEditTableViewController.swift in Sources */,
 				6F303D011DC104C300216158 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +356,7 @@
 		};
 		6F303D101DC104C300216158 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C44411221D4C15F79ACE43C9 /* Pods-RealmDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RealmDemo/Info.plist;
@@ -260,6 +368,7 @@
 		};
 		6F303D111DC104C300216158 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5DD49B0D2A1E33B4A487AB /* Pods-RealmDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RealmDemo/Info.plist;
@@ -288,6 +397,7 @@
 				6F303D111DC104C300216158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
