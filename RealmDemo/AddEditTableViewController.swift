@@ -88,7 +88,7 @@ class AddEditTableViewController: UITableViewController, UIImagePickerController
             }
         }
         else{
-            let person = Person(value: ["name" : nameTextField.text! as AnyObject, "age" : Int(ageTextField.text!) as! AnyObject, "profile" :UIImagePNGRepresentation(profileImageView.image!) as! AnyObject])
+            let person = Person(value: ["name" : nameTextField.text! as AnyObject, "age" : age as AnyObject, "profile" :UIImagePNGRepresentation(profileImageView.image!) as! AnyObject])
             
             try! realm.write {
                 realm.add(person)
