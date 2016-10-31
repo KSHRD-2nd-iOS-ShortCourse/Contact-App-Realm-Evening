@@ -16,9 +16,13 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
     
     var resultSearchController:UISearchController!
 
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // for swift 2.0 Xcode 7
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         
         // 1
         resultSearchController = UISearchController(searchResultsController: nil)
@@ -39,17 +43,11 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     override func viewDidAppear(animated: Bool) {
-//        let personService = PersonService()
-//        data = personService.getAll()
-//        displayedData = data
-//        tableView.reloadData()
-        
         readTasksAndUpdateUI()
     }
     
     
     func readTasksAndUpdateUI(){
-        let realm = try! Realm()
         lists = realm.objects(Person.self)
         tableView.reloadData()
     }
@@ -80,10 +78,8 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
             
             let personToBeDeleted = self.lists[indexPath.row]
             
-            let realm = try! Realm()
-            try! realm.write{
-                
-                realm.delete(personToBeDeleted)
+            try! self.realm.write{
+                self.realm.delete(personToBeDeleted)
                 self.readTasksAndUpdateUI()
             }
         }
@@ -97,12 +93,10 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
         return [deleteAction, editAction]
     }
     
-    
     // MARK : Search Controller
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         // Check if the user cancelled or deleted the search term so we can display the full list instead.
-        let realm = try! Realm()
-        
+
         if searchController.searchBar.text?.characters.count > 0 {
             // Query using an NSPredicate
             let searchPredicate = NSPredicate(format: "SELF.name CONTAINS[c] %@", searchController.searchBar.text!)
@@ -116,7 +110,6 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
         tableView.reloadData()
     }
 
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showEdit" {
             let destView = segue.destinationViewController as! AddEditTableViewController
@@ -124,6 +117,5 @@ class HomeTableViewController: UITableViewController, UISearchResultsUpdating {
         }
         
     }
-
 }
 

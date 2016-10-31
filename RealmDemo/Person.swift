@@ -10,15 +10,18 @@ import Foundation
 import RealmSwift
 
 class Person: Object {
+    dynamic var id = NSUUID().UUIDString
     dynamic var name = ""
     dynamic var age = 0
     dynamic var profile = NSData()
+    
+    override class func primaryKey() -> String? {
+        return "id"
+    }
     
 // Specify properties to ignore (Realm won't persist these)
     
 //  override static func ignoredProperties() -> [String] {
 //    return []
 //  }
-    
-
 }
